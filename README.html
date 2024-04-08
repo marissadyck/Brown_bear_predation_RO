@@ -297,23 +297,17 @@ overflow-y: auto;
 border: 1px solid #ddd;
 border-radius: 4px;
 }
-.tabset-dropdown > .nav-tabs > li.active:before {
-content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+content: "\e259";
 font-family: 'Glyphicons Halflings';
 display: inline-block;
 padding: 10px;
 border-right: 1px solid #ddd;
 }
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-content: "";
-border: none;
-}
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-content: "";
+content: "\e258";
 font-family: 'Glyphicons Halflings';
-display: inline-block;
-padding: 10px;
-border-right: 1px solid #ddd;
+border: none;
 }
 .tabset-dropdown > .nav-tabs > li.active {
 display: block;
@@ -365,8 +359,8 @@ predation events on livestock in the Romanian Carpathians</p>
 <hr>
 <div id="general-information" class="section level3">
 <h3>GENERAL INFORMATION</h3>
-<p><strong>Title:</strong> Data and code for - Predictors of brown bear
-predation events on livestock in the Romanian Carpathians</p>
+<p><strong>Title:</strong> Predictors of brown bear predation events on
+livestock in the Romanian Carpathians</p>
 <p><strong>Author Information (data):</strong><br />
 Principal Investigator Contact Information<br />
 Name: Mihai I. Pop<br />
@@ -408,26 +402,44 @@ Practice</em> , e12884. <a href="https://doi.org/10.1111/csp2.12884" class="uri"
 <div id="data-file-overview" class="section level3">
 <h3>DATA &amp; FILE OVERVIEW</h3>
 <p><strong>File List:</strong></p>
+<p><em>Files in main folder</em></p>
 <ul>
 <li><span style="color: #7B0F17;"><strong>Brown_bear_predation.Rproj</strong></span>;
 R project to run code for Pop et al., 2023</li>
+<li><span style="color: #7B0F17;"><strong>README.html</strong></span>; a
+web browser version of this README file</li>
+<li><span style="color: #7B0F17;"><strong>README.md</strong></span>; a
+markdown version of this README file that can be altered in Rstudio</li>
+</ul>
+<p><em>Files in data folder</em></p>
+<p><em>/raw</em></p>
+<ul>
+<li><span style="color: #7B0F17;"><strong>pagube_2008_2016_spatial.csv</strong></span>;
+contains raw data for brown bear predation of all livestock types in
+Romania from 2008-2016 and pesudo-absences</li>
+</ul>
+<p><em>/processed</em></p>
+<ul>
+<li><span style="color: #7B0F17;"><strong>cows.csv</strong></span>;
+contains data for brown bear predation of cows specifically in Romania
+from 2008-2016 and pesudo-absences - a subset of data from the
+<em>pagube_2008_2016_spatial.csv</em></li>
+<li><span style="color: #7B0F17;"><strong>sheep.csv</strong></span>;
+contains data for brown bear predation of sheep specifically in Romania
+from 2008-2016 and pesudo-absences - a subset of data from the
+<em>pagube_2008_2016_spatial.csv</em></li>
+<li><span style="color: #7B0F17;"><strong>other.csv</strong></span>;
+contains data for brown bear predation of other livestock types in
+Romania from 2008-2016 and pesudo-absences - a subset of data from the
+<em>pagube_2008_2016_spatial.csv</em></li>
+</ul>
+<p><em>Files in scripts folder</em></p>
+<ul>
 <li><span style="color: #7B0F17;"><strong>brown_bear_predation_data_formatting.R</strong></span>;
 R script with code for formatting the raw data for Pop et al., 2023</li>
 <li><span style="color: #7B0F17;"><strong>brown_bear_predation_glmm</strong></span>;
 R script with code for generalized linear mixed effect models used in
-Pop et al., 2023</li>
-<li><span style="color: #7B0F17;"><strong>pagube_2008_2016_spatial.csv</strong></span>;
-contains raw data for brown bear predation of all livestock types in
-Romania from 2008-2016 and pesudo-absences</li>
-<li><span style="color: #7B0F17;"><strong>cows.csv</strong></span>;
-contains data for brown bear predation of cows in Romania from 2008-2016
-and pesudo-absences</li>
-<li><span style="color: #7B0F17;"><strong>sheep.csv</strong></span>;
-contains data for brown bear predation of sheep in Romania from
-2008-2016 and pesudo-absences</li>
-<li><span style="color: #7B0F17;"><strong>other.csv</strong></span>;
-contains data for brown bear predation of other livestock types in
-Romania from 2008-2016 and pesudo-absences</li>
+Pop et al., 2023raw</li>
 </ul>
 </div>
 <div id="methodological-information" class="section level3">
@@ -456,387 +468,387 @@ and/or submission:</strong> The data was collected by three local EPAs
 LIFE08/NAT/RO/000500)</p>
 </div>
 <div id="data-specific-information-for-pagube_2008_2016_spatial.csv" class="section level3">
-<h3>DATA-SPECIFIC INFORMATION FOR: [pagube_2008_2016_spatial.csv]</h3>
+<h3>DATA-SPECIFIC INFORMATION FOR: [ <span style="color: #7B0F17;">pagube_2008_2016_spatial.csv</span>]</h3>
 <ul>
 <li><strong>Number of variables:</strong> 24</li>
 <li><strong>Number of observations/rows:</strong> 3024</li>
 </ul>
 <p><strong>Variable List:</strong></p>
 <ul>
-<li><span style="color: #E8A12C;"><strong>damage</strong></span>, binary
+<li><span style="color: #002747;"><strong>damage</strong></span>, binary
 indicator for presence/absence of livestock damage caused by brown bears
 (0 = no damage 1 = damage)</li>
-<li><span style="color: #E8A12C;"><strong>year</strong></span>, factor
+<li><span style="color: #002747;"><strong>year</strong></span>, factor
 describing the year the damage was recorded</li>
-<li><span style="color: #E8A12C;"><strong>month</strong></span>, numeric
+<li><span style="color: #002747;"><strong>month</strong></span>, numeric
 notation describing the month the damage was recorded (1 = January)</li>
-<li><span style="color: #E8A12C;"><strong>targetspp</strong></span>,
+<li><span style="color: #002747;"><strong>targetspp</strong></span>,
 indicator of the livestock type affected</li>
-<li><span style="color: #E8A12C;"><strong>point_x</strong></span>, UTM
+<li><span style="color: #002747;"><strong>point_x</strong></span>, UTM
 Northing for livestock damage</li>
-<li><span style="color: #E8A12C;"><strong>point_y</strong></span>, UTM
+<li><span style="color: #002747;"><strong>point_y</strong></span>, UTM
 Easting for livestock damage</li>
-<li><span style="color: #E8A12C;"><strong>bear_abund</strong></span>,
+<li><span style="color: #002747;"><strong>bear_abund</strong></span>,
 relative bear abundance estimated by hunters in 2016 and recorded at the
 game unit level</li>
-<li><span style="color: #E8A12C;"><strong>landcover_code</strong></span>, the
+<li><span style="color: #002747;"><strong>landcover_code</strong></span>, the
 landcover type in 2018 as defined by
 <a href="https://land.copernicus.eu/eagle/files/eagle-related-projects/pt_clc-conversion-to-fao-lccs3_dec2010" target="_blank">CORINE
 Land Cover Classification system</a>.</li>
-<li><span style="color: #E8A12C;"><strong>altitude</strong></span>, the
+<li><span style="color: #002747;"><strong>altitude</strong></span>, the
 altitude at the location recorded in meters.</li>
-<li><span style="color: #E8A12C;"><strong>human_population</strong></span>, number
+<li><span style="color: #002747;"><strong>human_population</strong></span>, number
 of people living in administrative units</li>
-<li><span style="color: #E8A12C;"><strong>dist_to_forest</strong></span>, distance
+<li><span style="color: #002747;"><strong>dist_to_forest</strong></span>, distance
 to nearest forest measured in meters</li>
-<li><span style="color: #E8A12C;"><strong>dist_to_town</strong></span>,
+<li><span style="color: #002747;"><strong>dist_to_town</strong></span>,
 distance to nearest human settlement (defined as artificial surface
 class in CORINE Land Cover) measured in meters</li>
-<li><span style="color: #E8A12C;"><strong>livestock_killed</strong></span>, number
+<li><span style="color: #002747;"><strong>livestock_killed</strong></span>, number
 of livestock killed per incident</li>
-<li><span style="color: #E8A12C;"><strong>shannondivindex</strong></span>, shannon
+<li><span style="color: #002747;"><strong>shannondivindex</strong></span>, shannon
 diversity index for flora</li>
-<li><span style="color: #E8A12C;"><strong>prop_arable</strong></span>,
+<li><span style="color: #002747;"><strong>prop_arable</strong></span>,
 proportion of arable land (defined by CORINE Land Cover classification)
 in 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>prop_orchards</strong></span>,
+<li><span style="color: #002747;"><strong>prop_orchards</strong></span>,
 proportion of orchards/permanent crops (defined by CORINE Land Cover
 classification) in 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>prop_pasture</strong></span>,
+<li><span style="color: #002747;"><strong>prop_pasture</strong></span>,
 proportion of pastures (defined by CORINE Land Cover classification) in
 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>prop_ag_mosaic</strong></span>,
+<li><span style="color: #002747;"><strong>prop_ag_mosaic</strong></span>,
 proportion of heterogeneous agricultural areas (defined by CORINE Land
 Cover classification) in 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>prop_seminatural</strong></span>,
+<li><span style="color: #002747;"><strong>prop_seminatural</strong></span>,
 proportion of aseminatural areas (defined by CORINE Land Cover
 classification) in 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>prop_deciduous</strong></span>,
+<li><span style="color: #002747;"><strong>prop_deciduous</strong></span>,
 proportion of deciduous forests (defined by CORINE Land Cover
 classification) in 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>prop_coniferous</strong></span>,
+<li><span style="color: #002747;"><strong>prop_coniferous</strong></span>,
 proportion of coniferous forests (defined by CORINE Land Cover
 classification) in 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>prop_mixedforest</strong></span>,
+<li><span style="color: #002747;"><strong>prop_mixedforest</strong></span>,
 proportion of mixed forests (defined by CORINE Land Cover
 classification) in 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>prop_grassland</strong></span>,
+<li><span style="color: #002747;"><strong>prop_grassland</strong></span>,
 proportion of grasslands (defined by CORINE Land Cover classification)
 in 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>prop_for_regen</strong></span>,
+<li><span style="color: #002747;"><strong>prop_for_regen</strong></span>,
 proportion of transitional woodland-shrub (defined by CORINE Land Cover
 classification) in 10 km2 area around location</li>
 </ul>
 </div>
 <div id="data-specific-information-for-cows.csv" class="section level3">
-<h3>DATA-SPECIFIC INFORMATION FOR: [cows.csv]</h3>
+<h3>DATA-SPECIFIC INFORMATION FOR: [ <span style="color: #7B0F17;">cows.csv</span>]</h3>
 <ul>
 <li><strong>Number of variables:</strong> 34</li>
 <li><strong>Number of cases/rows:</strong> 1620</li>
 </ul>
 <p><strong>Variable List:</strong></p>
 <ul>
-<li><span style="color: #E8A12C;"><strong>damage</strong></span>, binary
+<li><span style="color: #002747;"><strong>damage</strong></span>, binary
 indicator for presence/absence of livestock damage caused by brown bears
 (0 = no damage 1 = damage)</li>
-<li><span style="color: #E8A12C;"><strong>year</strong></span>, factor
+<li><span style="color: #002747;"><strong>year</strong></span>, factor
 describing the year the damage was recorded</li>
-<li><span style="color: #E8A12C;"><strong>month</strong></span>, numeric
+<li><span style="color: #002747;"><strong>month</strong></span>, numeric
 notation describing the month the damage was recorded (1 = January)</li>
-<li><span style="color: #E8A12C;"><strong>targetspp</strong></span>,
+<li><span style="color: #002747;"><strong>targetspp</strong></span>,
 indicator of the livestock type affected</li>
-<li><span style="color: #E8A12C;"><strong>point_x</strong></span>, UTM
+<li><span style="color: #002747;"><strong>point_x</strong></span>, UTM
 Northing for livestock damage</li>
-<li><span style="color: #E8A12C;"><strong>point_y</strong></span>, UTM
+<li><span style="color: #002747;"><strong>point_y</strong></span>, UTM
 Easting for livestock damage</li>
-<li><span style="color: #E8A12C;"><strong>bear_abund</strong></span>,
+<li><span style="color: #002747;"><strong>bear_abund</strong></span>,
 relative bear abundance estimated by hunters in 2016 and recorded at the
 game unit level</li>
-<li><span style="color: #E8A12C;"><strong>landcover_2</strong></span>,
+<li><span style="color: #002747;"><strong>landcover_2</strong></span>,
 grouped classification of CORINE Land Cover variables from
 landcover_code (see brown_bear_predation_data_formatting for specific
 groupings)</li>
-<li><span style="color: #E8A12C;"><strong>altitude</strong></span>, the
+<li><span style="color: #002747;"><strong>altitude</strong></span>, the
 altitude at the location recorded in meters</li>
-<li><span style="color: #E8A12C;"><strong>human_population</strong></span>, number
+<li><span style="color: #002747;"><strong>human_population</strong></span>, number
 of people living in administrative units</li>
-<li><span style="color: #E8A12C;"><strong>dist_to_forest</strong></span>, distance
+<li><span style="color: #002747;"><strong>dist_to_forest</strong></span>, distance
 to nearest forest measured in meters</li>
-<li><span style="color: #E8A12C;"><strong>dist_to_town</strong></span>,
+<li><span style="color: #002747;"><strong>dist_to_town</strong></span>,
 distance to nearest human settlement (defined as artificial surface
 class in CORINE Land Cover) measured in meters</li>
-<li><span style="color: #E8A12C;"><strong>livestock_killed</strong></span>, number
+<li><span style="color: #002747;"><strong>livestock_killed</strong></span>, number
 of livestock killed per incident</li>
-<li><span style="color: #E8A12C;"><strong>shannondivindex</strong></span>, shannon
+<li><span style="color: #002747;"><strong>shannondivindex</strong></span>, shannon
 diversity index for flora</li>
-<li><span style="color: #E8A12C;"><strong>prop_arable</strong></span>,
+<li><span style="color: #002747;"><strong>prop_arable</strong></span>,
 proportion of arable land (defined by CORINE Land Cover classification)
-in 10 km2 area around location <span style="color: #E8A12C;"><strong>prop_orchards</strong></span>,
+in 10 km2 area around location <span style="color: #002747;"><strong>prop_orchards</strong></span>,
 proportion of orchards/permanent crops (defined by CORINE Land Cover
 classification) in 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>prop_pasture</strong></span>,
+<li><span style="color: #002747;"><strong>prop_pasture</strong></span>,
 proportion of pastures (defined by CORINE Land Cover classification) in
 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>prop_ag_mosaic</strong></span>,
+<li><span style="color: #002747;"><strong>prop_ag_mosaic</strong></span>,
 proportion of heterogeneous agricultural areas (defined by CORINE Land
 Cover classification) in 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>prop_seminatural</strong></span>,
+<li><span style="color: #002747;"><strong>prop_seminatural</strong></span>,
 proportion of aseminatural areas (defined by CORINE Land Cover
 classification) in 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>prop_deciduous</strong></span>,
+<li><span style="color: #002747;"><strong>prop_deciduous</strong></span>,
 proportion of deciduous forests (defined by CORINE Land Cover
 classification) in 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>prop_coniferous</strong></span>,
+<li><span style="color: #002747;"><strong>prop_coniferous</strong></span>,
 proportion of coniferous forests (defined by CORINE Land Cover
 classification) in 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>prop_mixedforest</strong></span>,
+<li><span style="color: #002747;"><strong>prop_mixedforest</strong></span>,
 proportion of mixed forests (defined by CORINE Land Cover
 classification) in 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>prop_grassland</strong></span>,
+<li><span style="color: #002747;"><strong>prop_grassland</strong></span>,
 proportion of grasslands (defined by CORINE Land Cover classification)
 in 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>prop_for_regen</strong></span>,
+<li><span style="color: #002747;"><strong>prop_for_regen</strong></span>,
 proportion of transitional woodland-shrub (defined by CORINE Land Cover
 classification) in 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>openhab_10k</strong></span>,
+<li><span style="color: #002747;"><strong>openhab_10k</strong></span>,
 proportion of open habitat (landcover_2 grouping) extracted within a
 10km2 area around each location (using a moving window approach in GIS),
 scaled and centered</li>
-<li><span style="color: #E8A12C;"><strong>forest_10k</strong></span>,
+<li><span style="color: #002747;"><strong>forest_10k</strong></span>,
 proportion of forest (landcover_2 grouping) extracted within a 10km2
 area around each location (using a moving window approach in GIS),
 scaled and centered</li>
-<li><span style="color: #E8A12C;"><strong>urban_10k</strong></span>,
+<li><span style="color: #002747;"><strong>urban_10k</strong></span>,
 proportion of artificial surfaces (landcover_2 grouping) extracted
 within a 10km2 area around each location (using a moving window approach
 in GIS), scaled and centered</li>
-<li><span style="color: #E8A12C;"><strong>heteroag_10k</strong></span>,
+<li><span style="color: #002747;"><strong>heteroag_10k</strong></span>,
 proportion of heterogenous agriculture (landcover_2 grouping) extracted
 within a 10km2 area around each location (using a moving window approach
 in GIS), scaled and centered</li>
-<li><span style="color: #E8A12C;"><strong>ag_10k</strong></span>,
+<li><span style="color: #002747;"><strong>ag_10k</strong></span>,
 proportion of agricultural land (landcover_2 grouping) extracted within
 a 10km2 area around each location (using a moving window approach in
 GIS), scaled and centered</li>
-<li><span style="color: #E8A12C;"><strong>shdi_10k</strong></span>,
+<li><span style="color: #002747;"><strong>shdi_10k</strong></span>,
 shannon diversity index for flora calculated for a 10km2 area around
 each location (using a moving window approach in GIS) and based on
 CORINE Land Cover 2012 classes, scaled and centered</li>
-<li><span style="color: #E8A12C;"><strong>s.bear_abund</strong></span>,
+<li><span style="color: #002747;"><strong>s.bear_abund</strong></span>,
 scaled and centered <em>bear_abund</em></li>
-<li><span style="color: #E8A12C;"><strong>s.altitude</strong></span>,
+<li><span style="color: #002747;"><strong>s.altitude</strong></span>,
 scaled and centered <em>altitude</em></li>
-<li><span style="color: #E8A12C;"><strong>s.dist_to_town</strong></span>, scaled
+<li><span style="color: #002747;"><strong>s.dist_to_town</strong></span>, scaled
 and centered <em>dist_to_town</em></li>
-<li><span style="color: #E8A12C;"><strong>s.dist_to_forest</strong></span>, scaled
+<li><span style="color: #002747;"><strong>s.dist_to_forest</strong></span>, scaled
 and centered <em>dist_to_forest</em></li>
 </ul>
 </div>
 <div id="data-specific-information-for-sheep.csv" class="section level3">
-<h3>DATA-SPECIFIC INFORMATION FOR: [sheep.csv]</h3>
+<h3>DATA-SPECIFIC INFORMATION FOR: [ <span style="color: #7B0F17;">sheep.csv</span>]</h3>
 <ul>
 <li><strong>Number of variables:</strong> 34</li>
 <li><strong>Number of cases/rows:</strong> 844</li>
 </ul>
 <p><strong>Variable List:</strong></p>
 <ul>
-<li><span style="color: #E8A12C;"><strong>damage</strong></span>, binary
+<li><span style="color: #002747;"><strong>damage</strong></span>, binary
 indicator for presence/absence of livestock damage caused by brown bears
 (0 = no damage 1 = damage)</li>
-<li><span style="color: #E8A12C;"><strong>year</strong></span>, factor
+<li><span style="color: #002747;"><strong>year</strong></span>, factor
 describing the year the damage was recorded</li>
-<li><span style="color: #E8A12C;"><strong>month</strong></span>, numeric
+<li><span style="color: #002747;"><strong>month</strong></span>, numeric
 notation describing the month the damage was recorded (1 = January)</li>
-<li><span style="color: #E8A12C;"><strong>targetspp</strong></span>,
+<li><span style="color: #002747;"><strong>targetspp</strong></span>,
 indicator of the livestock type affected</li>
-<li><span style="color: #E8A12C;"><strong>point_x</strong></span>, UTM
+<li><span style="color: #002747;"><strong>point_x</strong></span>, UTM
 Northing for livestock damage</li>
-<li><span style="color: #E8A12C;"><strong>point_y</strong></span>, UTM
+<li><span style="color: #002747;"><strong>point_y</strong></span>, UTM
 Easting for livestock damage</li>
-<li><span style="color: #E8A12C;"><strong>bear_abund</strong></span>,
+<li><span style="color: #002747;"><strong>bear_abund</strong></span>,
 relative bear abundance estimated by hunters in 2016 and recorded at the
 game unit level</li>
-<li><span style="color: #E8A12C;"><strong>landcover_2</strong></span>,
+<li><span style="color: #002747;"><strong>landcover_2</strong></span>,
 grouped classification of CORINE Land Cover variables from
 landcover_code (see brown_bear_predation_data_formatting for specific
 groupings)</li>
-<li><span style="color: #E8A12C;"><strong>altitude</strong></span>, the
+<li><span style="color: #002747;"><strong>altitude</strong></span>, the
 altitude at the location recorded in meters</li>
-<li><span style="color: #E8A12C;"><strong>human_population</strong></span>, number
+<li><span style="color: #002747;"><strong>human_population</strong></span>, number
 of people living in administrative units</li>
-<li><span style="color: #E8A12C;"><strong>dist_to_forest</strong></span>, distance
+<li><span style="color: #002747;"><strong>dist_to_forest</strong></span>, distance
 to nearest forest measured in meters</li>
-<li><span style="color: #E8A12C;"><strong>dist_to_town</strong></span>,
+<li><span style="color: #002747;"><strong>dist_to_town</strong></span>,
 distance to nearest human settlement (defined as artificial surface
 class in CORINE Land Cover) measured in meters</li>
-<li><span style="color: #E8A12C;"><strong>livestock_killed</strong></span>, number
+<li><span style="color: #002747;"><strong>livestock_killed</strong></span>, number
 of livestock killed per incident</li>
-<li><span style="color: #E8A12C;"><strong>shannondivindex</strong></span>, shannon
+<li><span style="color: #002747;"><strong>shannondivindex</strong></span>, shannon
 diversity index for flora</li>
-<li><span style="color: #E8A12C;"><strong>prop_arable</strong></span>,
+<li><span style="color: #002747;"><strong>prop_arable</strong></span>,
 proportion of arable land (defined by CORINE Land Cover classification)
-in 10 km2 area around location <span style="color: #E8A12C;"><strong>prop_orchards</strong></span>,
+in 10 km2 area around location <span style="color: #002747;"><strong>prop_orchards</strong></span>,
 proportion of orchards/permanent crops (defined by CORINE Land Cover
 classification) in 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>prop_pasture</strong></span>,
+<li><span style="color: #002747;"><strong>prop_pasture</strong></span>,
 proportion of pastures (defined by CORINE Land Cover classification) in
 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>prop_ag_mosaic</strong></span>,
+<li><span style="color: #002747;"><strong>prop_ag_mosaic</strong></span>,
 proportion of heterogeneous agricultural areas (defined by CORINE Land
 Cover classification) in 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>prop_seminatural</strong></span>,
+<li><span style="color: #002747;"><strong>prop_seminatural</strong></span>,
 proportion of aseminatural areas (defined by CORINE Land Cover
 classification) in 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>prop_deciduous</strong></span>,
+<li><span style="color: #002747;"><strong>prop_deciduous</strong></span>,
 proportion of deciduous forests (defined by CORINE Land Cover
 classification) in 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>prop_coniferous</strong></span>,
+<li><span style="color: #002747;"><strong>prop_coniferous</strong></span>,
 proportion of coniferous forests (defined by CORINE Land Cover
 classification) in 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>prop_mixedforest</strong></span>,
+<li><span style="color: #002747;"><strong>prop_mixedforest</strong></span>,
 proportion of mixed forests (defined by CORINE Land Cover
 classification) in 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>prop_grassland</strong></span>,
+<li><span style="color: #002747;"><strong>prop_grassland</strong></span>,
 proportion of grasslands (defined by CORINE Land Cover classification)
 in 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>prop_for_regen</strong></span>,
+<li><span style="color: #002747;"><strong>prop_for_regen</strong></span>,
 proportion of transitional woodland-shrub (defined by CORINE Land Cover
 classification) in 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>openhab_10k</strong></span>,
+<li><span style="color: #002747;"><strong>openhab_10k</strong></span>,
 proportion of open habitat (landcover_2 grouping) extracted within a
 10km2 area around each location (using a moving window approach in GIS),
 scaled and centered</li>
-<li><span style="color: #E8A12C;"><strong>forest_10k</strong></span>,
+<li><span style="color: #002747;"><strong>forest_10k</strong></span>,
 proportion of forest (landcover_2 grouping) extracted within a 10km2
 area around each location (using a moving window approach in GIS),
 scaled and centered</li>
-<li><span style="color: #E8A12C;"><strong>urban_10k</strong></span>,
+<li><span style="color: #002747;"><strong>urban_10k</strong></span>,
 proportion of artificial surfaces (landcover_2 grouping) extracted
 within a 10km2 area around each location (using a moving window approach
 in GIS), scaled and centered</li>
-<li><span style="color: #E8A12C;"><strong>heteroag_10k</strong></span>,
+<li><span style="color: #002747;"><strong>heteroag_10k</strong></span>,
 proportion of heterogenous agriculture (landcover_2 grouping) extracted
 within a 10km2 area around each location (using a moving window approach
 in GIS), scaled and centered</li>
-<li><span style="color: #E8A12C;"><strong>ag_10k</strong></span>,
+<li><span style="color: #002747;"><strong>ag_10k</strong></span>,
 proportion of agricultural land (landcover_2 grouping) extracted within
 a 10km2 area around each location (using a moving window approach in
 GIS), scaled and centered</li>
-<li><span style="color: #E8A12C;"><strong>shdi_10k</strong></span>,
+<li><span style="color: #002747;"><strong>shdi_10k</strong></span>,
 shannon diversity index for flora calculated for a 10km2 area around
 each location (using a moving window approach in GIS) and based on
 CORINE Land Cover 2012 classes, scaled and centered</li>
-<li><span style="color: #E8A12C;"><strong>s.bear_abund</strong></span>,
+<li><span style="color: #002747;"><strong>s.bear_abund</strong></span>,
 scaled and centered <em>bear_abund</em></li>
-<li><span style="color: #E8A12C;"><strong>s.altitude</strong></span>,
+<li><span style="color: #002747;"><strong>s.altitude</strong></span>,
 scaled and centered <em>altitude</em></li>
-<li><span style="color: #E8A12C;"><strong>s.dist_to_town</strong></span>, scaled
+<li><span style="color: #002747;"><strong>s.dist_to_town</strong></span>, scaled
 and centered <em>dist_to_town</em></li>
-<li><span style="color: #E8A12C;"><strong>s.dist_to_forest</strong></span>, scaled
+<li><span style="color: #002747;"><strong>s.dist_to_forest</strong></span>, scaled
 and centered <em>dist_to_forest</em></li>
 </ul>
 </div>
 <div id="data-specific-information-for-other.csv" class="section level3">
-<h3>DATA-SPECIFIC INFORMATION FOR: [other.csv]</h3>
+<h3>DATA-SPECIFIC INFORMATION FOR: [ <span style="color: #7B0F17;">other.csv</span>]</h3>
 <ul>
 <li><strong>Number of variables:</strong> 34</li>
 <li><strong>Number of cases/rows:</strong> 536</li>
 </ul>
 <p><strong>Variable List:</strong></p>
 <ul>
-<li><span style="color: #E8A12C;"><strong>damage</strong></span>, binary
+<li><span style="color: #002747;"><strong>damage</strong></span>, binary
 indicator for presence/absence of livestock damage caused by brown bears
 (0 = no damage 1 = damage)</li>
-<li><span style="color: #E8A12C;"><strong>year</strong></span>, factor
+<li><span style="color: #002747;"><strong>year</strong></span>, factor
 describing the year the damage was recorded</li>
-<li><span style="color: #E8A12C;"><strong>month</strong></span>, numeric
+<li><span style="color: #002747;"><strong>month</strong></span>, numeric
 notation describing the month the damage was recorded (1 = January)</li>
-<li><span style="color: #E8A12C;"><strong>targetspp</strong></span>,
+<li><span style="color: #002747;"><strong>targetspp</strong></span>,
 indicator of the livestock type affected</li>
-<li><span style="color: #E8A12C;"><strong>point_x</strong></span>, UTM
+<li><span style="color: #002747;"><strong>point_x</strong></span>, UTM
 Northing for livestock damage</li>
-<li><span style="color: #E8A12C;"><strong>point_y</strong></span>, UTM
+<li><span style="color: #002747;"><strong>point_y</strong></span>, UTM
 Easting for livestock damage</li>
-<li><span style="color: #E8A12C;"><strong>bear_abund</strong></span>,
+<li><span style="color: #002747;"><strong>bear_abund</strong></span>,
 relative bear abundance estimated by hunters in 2016 and recorded at the
 game unit level</li>
-<li><span style="color: #E8A12C;"><strong>landcover_2</strong></span>,
+<li><span style="color: #002747;"><strong>landcover_2</strong></span>,
 grouped classification of CORINE Land Cover variables from
 landcover_code (see brown_bear_predation_data_formatting for specific
 groupings)</li>
-<li><span style="color: #E8A12C;"><strong>altitude</strong></span>, the
+<li><span style="color: #002747;"><strong>altitude</strong></span>, the
 altitude at the location recorded in meters</li>
-<li><span style="color: #E8A12C;"><strong>human_population</strong></span>, number
+<li><span style="color: #002747;"><strong>human_population</strong></span>, number
 of people living in administrative units</li>
-<li><span style="color: #E8A12C;"><strong>dist_to_forest</strong></span>, distance
+<li><span style="color: #002747;"><strong>dist_to_forest</strong></span>, distance
 to nearest forest measured in meters</li>
-<li><span style="color: #E8A12C;"><strong>dist_to_town</strong></span>,
+<li><span style="color: #002747;"><strong>dist_to_town</strong></span>,
 distance to nearest human settlement (defined as artificial surface
 class in CORINE Land Cover) measured in meters</li>
-<li><span style="color: #E8A12C;"><strong>livestock_killed</strong></span>, number
+<li><span style="color: #002747;"><strong>livestock_killed</strong></span>, number
 of livestock killed per incident</li>
-<li><span style="color: #E8A12C;"><strong>shannondivindex</strong></span>, shannon
+<li><span style="color: #002747;"><strong>shannondivindex</strong></span>, shannon
 diversity index for flora</li>
-<li><span style="color: #E8A12C;"><strong>prop_arable</strong></span>,
+<li><span style="color: #002747;"><strong>prop_arable</strong></span>,
 proportion of arable land (defined by CORINE Land Cover classification)
-in 10 km2 area around location <span style="color: #E8A12C;"><strong>prop_orchards</strong></span>,
+in 10 km2 area around location <span style="color: #002747;"><strong>prop_orchards</strong></span>,
 proportion of orchards/permanent crops (defined by CORINE Land Cover
 classification) in 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>prop_pasture</strong></span>,
+<li><span style="color: #002747;"><strong>prop_pasture</strong></span>,
 proportion of pastures (defined by CORINE Land Cover classification) in
 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>prop_ag_mosaic</strong></span>,
+<li><span style="color: #002747;"><strong>prop_ag_mosaic</strong></span>,
 proportion of heterogeneous agricultural areas (defined by CORINE Land
 Cover classification) in 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>prop_seminatural</strong></span>,
+<li><span style="color: #002747;"><strong>prop_seminatural</strong></span>,
 proportion of aseminatural areas (defined by CORINE Land Cover
 classification) in 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>prop_deciduous</strong></span>,
+<li><span style="color: #002747;"><strong>prop_deciduous</strong></span>,
 proportion of deciduous forests (defined by CORINE Land Cover
 classification) in 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>prop_coniferous</strong></span>,
+<li><span style="color: #002747;"><strong>prop_coniferous</strong></span>,
 proportion of coniferous forests (defined by CORINE Land Cover
 classification) in 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>prop_mixedforest</strong></span>,
+<li><span style="color: #002747;"><strong>prop_mixedforest</strong></span>,
 proportion of mixed forests (defined by CORINE Land Cover
 classification) in 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>prop_grassland</strong></span>,
+<li><span style="color: #002747;"><strong>prop_grassland</strong></span>,
 proportion of grasslands (defined by CORINE Land Cover classification)
 in 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>prop_for_regen</strong></span>,
+<li><span style="color: #002747;"><strong>prop_for_regen</strong></span>,
 proportion of transitional woodland-shrub (defined by CORINE Land Cover
 classification) in 10 km2 area around location</li>
-<li><span style="color: #E8A12C;"><strong>openhab_10k</strong></span>,
+<li><span style="color: #002747;"><strong>openhab_10k</strong></span>,
 proportion of open habitat (landcover_2 grouping) extracted within a
 10km2 area around each location (using a moving window approach in GIS),
 scaled and centered</li>
-<li><span style="color: #E8A12C;"><strong>forest_10k</strong></span>,
+<li><span style="color: #002747;"><strong>forest_10k</strong></span>,
 proportion of forest (landcover_2 grouping) extracted within a 10km2
 area around each location (using a moving window approach in GIS),
 scaled and centered</li>
-<li><span style="color: #E8A12C;"><strong>urban_10k</strong></span>,
+<li><span style="color: #002747;"><strong>urban_10k</strong></span>,
 proportion of artificial surfaces (landcover_2 grouping) extracted
 within a 10km2 area around each location (using a moving window approach
 in GIS), scaled and centered</li>
-<li><span style="color: #E8A12C;"><strong>heteroag_10k</strong></span>,
+<li><span style="color: #002747;"><strong>heteroag_10k</strong></span>,
 proportion of heterogenous agriculture (landcover_2 grouping) extracted
 within a 10km2 area around each location (using a moving window approach
 in GIS), scaled and centered</li>
-<li><span style="color: #E8A12C;"><strong>ag_10k</strong></span>,
+<li><span style="color: #002747;"><strong>ag_10k</strong></span>,
 proportion of agricultural land (landcover_2 grouping) extracted within
 a 10km2 area around each location (using a moving window approach in
 GIS), scaled and centered</li>
-<li><span style="color: #E8A12C;"><strong>shdi_10k</strong></span>,
+<li><span style="color: #002747;"><strong>shdi_10k</strong></span>,
 shannon diversity index for flora calculated for a 10km2 area around
 each location (using a moving window approach in GIS) and based on
 CORINE Land Cover 2012 classes, scaled and centered</li>
-<li><span style="color: #E8A12C;"><strong>s.bear_abund</strong></span>,
+<li><span style="color: #002747;"><strong>s.bear_abund</strong></span>,
 scaled and centered <em>bear_abund</em></li>
-<li><span style="color: #E8A12C;"><strong>s.altitude</strong></span>,
+<li><span style="color: #002747;"><strong>s.altitude</strong></span>,
 scaled and centered <em>altitude</em></li>
-<li><span style="color: #E8A12C;"><strong>s.dist_to_town</strong></span>, scaled
+<li><span style="color: #002747;"><strong>s.dist_to_town</strong></span>, scaled
 and centered <em>dist_to_town</em></li>
-<li><span style="color: #E8A12C;"><strong>s.dist_to_forest</strong></span>, scaled
+<li><span style="color: #002747;"><strong>s.dist_to_forest</strong></span>, scaled
 and centered <em>dist_to_forest</em></li>
 </ul>
 </div>
